@@ -15,13 +15,14 @@ public class QuizzSumas : MonoBehaviour
     private int numal2;
     private int result;
     private int numjugador;
-    private int ecuacionresol;
+   
 
     void Start()
     {
 
         NumRandom();
         Suma();
+        
 
     }
 
@@ -40,15 +41,12 @@ public class QuizzSumas : MonoBehaviour
     private void Suma()
     {
         result = numal1 + numal2;
-    }
-    
-    public void BotonComp (int resultado)
-    {
-        numjugador = resultado;
-    }   
+    }    
 
     public void Comparar()
     {
+        int.TryParse(interactivo.text, out numjugador);
+
         Debug.Log(result);
         Debug.Log(numjugador);
 
